@@ -1,12 +1,13 @@
 # Datacore Take Home Assignment
 
-This repository is a small [monorepo](https://en.wikipedia.org/wiki/Monorepo) with two projects in two different languages.
+This repository is a small [monorepo](https://en.wikipedia.org/wiki/Monorepo) with two projects in two different languages.  Each sub-project is independent and has no cross-dependencies.
+
 
 ## Instructions
 
-1. Configure a build system for this monorepo with go and python projects.
+1. Configure a CI build system for this monorepo with go and python projects.
     * Builds should run automatically on commit.
-    * Individual projects should only be built if there have been changes within the project. e.g. The go build should either not run or stop immediately after starting when changes to the python project are committed.
+    * For project sub-folders, we expect a build only when there have been changes made to the sub-folder since the previous build run. e.g. When there is a commit to only the python project, then a Go build should not be triggered. Similarily, a commit made to both the Go and Python projects should build both
 2. Some builds require that some steps only be executed when there is a commit to a specific branch. Details are included in the associated language project folders.
 3. Care should be taken to make sure project builds are isolated from each other.
 
