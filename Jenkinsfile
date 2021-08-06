@@ -22,7 +22,7 @@ pipeline {
                 }
             }
             when {
-                changeset "go/**"
+                changeset "go/**,Jenkinsfile"
             }
             steps {
                 sh 'cd go && make all'
@@ -37,13 +37,13 @@ pipeline {
                 }
             }
             when {
-                changeset "python/**"
+                changeset "python/**,Jenkinsfile"
             }
             steps {
                 sh '''
                     cd python &&
                     pip install -r requirements.txt &&
-                    pipenv install --deploy --ignore-pipfile &&
+                    pipenv install --dev --deploy --ignore-pipfile &&
                     make all
                     '''
             }
