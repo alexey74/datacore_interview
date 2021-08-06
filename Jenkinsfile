@@ -94,7 +94,7 @@ pipeline {
                            + 'python/output/python-test.out,'
                            + 'python/output/python-coverage.tar.gz,'
                            + 'python/output/takehome-*.tar.gz'
-                , fingerprint: true
+                , fingerprint: true, allowEmptyArchive: true
             )
         }
     }
