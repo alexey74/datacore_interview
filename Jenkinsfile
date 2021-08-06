@@ -40,7 +40,7 @@ pipeline {
             steps {
                 sh '''
                     cd python &&
-                    pip install r requirements.txt &&
+                    pip install -r requirements.txt &&
                     pipenv --deploy --ignore-pipfile &&
                     make all
                     '''
