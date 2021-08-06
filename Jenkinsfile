@@ -43,7 +43,7 @@ pipeline {
                 sh '''
                     cd python &&
                     pip install -r requirements.txt &&
-                    pipenv --deploy --ignore-pipfile &&
+                    pipenv install --deploy --ignore-pipfile &&
                     make all
                     '''
             }
