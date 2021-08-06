@@ -22,6 +22,7 @@ pipeline {
                 }
             }
             when {
+                beforeAgent true
                 anyOf {
                     changeset "go/**"
                     changeset "Jenkinsfile"
@@ -40,6 +41,7 @@ pipeline {
                 }
             }
             when {
+                beforeAgent true
                 anyOf {
                     changeset "python/**"
                     changeset "Jenkinsfile"
@@ -62,6 +64,8 @@ pipeline {
                 }
             }
             when {
+                beforeAgent true
+                branch 'master'
                 changeset "go/**"
             }
             steps {
@@ -79,6 +83,8 @@ pipeline {
                 }
             }
             when {
+                beforeAgent true
+                branch 'master'
                 changeset "python/**"
             }
             steps {
