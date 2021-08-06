@@ -18,6 +18,7 @@ pipeline {
                 docker {
                     image "golang:${GO_VERSION}"
                     reuseNode true
+                    args '-u root --privileged'
                 }
             }
             when {
@@ -32,6 +33,7 @@ pipeline {
                 docker {
                     image "python:${PYTHON_VERSION}"
                     reuseNode true
+                    args '-u root --privileged'
                 }
             }
             when {
