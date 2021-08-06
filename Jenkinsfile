@@ -22,7 +22,10 @@ pipeline {
                 }
             }
             when {
-                changeset "go/**,Jenkinsfile"
+                anyOf {
+                    changeset "go/**"
+                    changeset "Jenkinsfile"
+                }
             }
             steps {
                 sh 'cd go && make all'
@@ -37,7 +40,10 @@ pipeline {
                 }
             }
             when {
-                changeset "python/**,Jenkinsfile"
+                anyOf {
+                    changeset "python/**"
+                    changeset "Jenkinsfile"
+                }
             }
             steps {
                 sh '''
