@@ -50,7 +50,7 @@ pipeline {
                     cd python &&
                     pip install -r requirements.txt &&
                     pipenv install --dev --deploy --ignore-pipfile &&
-                    make all
+                    pipenv run make all
                     '''
             }
         }
