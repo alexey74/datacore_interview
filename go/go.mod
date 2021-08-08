@@ -1,4 +1,4 @@
-module cisco.com/takehome
+module cisco.com/takehome/v0
 
 go 1.15
 
