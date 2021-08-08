@@ -4,7 +4,7 @@ import setuptools
 
 setuptools.setup(
     name="takehome",
-    version="0.0.0",
+    version="0.0.1",
     python_requires=">=3.7",
     description="Datacore takehome assignment",
     packages=setuptools.find_packages(),
