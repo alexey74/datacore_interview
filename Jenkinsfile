@@ -7,8 +7,6 @@
 def GO_VERSION = '1.15.6'
 def PYTHON_VERSION = '3.7.7'
 
-def artifacts = []
-
 pipeline {
     agent any
 
@@ -26,6 +24,7 @@ pipeline {
                 anyOf {
                     changeset "go/**"
                     changeset "Jenkinsfile"
+                    triggeredBy cause: "UserIdCause"
                 }
             }
             steps {
@@ -45,6 +44,7 @@ pipeline {
                 anyOf {
                     changeset "python/**"
                     changeset "Jenkinsfile"
+                    triggeredBy cause: "UserIdCause"
                 }
             }
             steps {
@@ -66,7 +66,10 @@ pipeline {
             when {
                 beforeAgent true
                 branch 'master'
-                changeset "go/**"
+                anyOf {
+                    changeset "go/**"
+                    triggeredBy cause: "UserIdCause"
+                }
             }
             steps {
                 milestone 1
@@ -85,7 +88,10 @@ pipeline {
             when {
                 beforeAgent true
                 branch 'master'
-                changeset "python/**"
+                anyOf {
+                    changeset "python/**"
+                    triggeredBy cause: "UserIdCause"
+                }
             }
             steps {
                 milestone 2
