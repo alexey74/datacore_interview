@@ -1,3 +1,5 @@
+SHELL := /bin/bash
+
 .PHONY: deps test build publish
 
 all: deps test build
