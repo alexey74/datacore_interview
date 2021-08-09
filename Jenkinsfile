@@ -24,6 +24,7 @@ pipeline {
                 anyOf {
                     changeset "go/**"
                     changeset "Jenkinsfile"
+                    branch 'master'
                     triggeredBy cause: "UserIdCause"
                 }
             }
@@ -44,6 +45,7 @@ pipeline {
                 anyOf {
                     changeset "python/**"
                     changeset "Jenkinsfile"
+                    branch 'master'
                     triggeredBy cause: "UserIdCause"
                 }
             }

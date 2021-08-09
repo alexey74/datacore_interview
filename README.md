@@ -1,5 +1,7 @@
 # Datacore Take Home Assignment
 
+[![Build Status](https://newagesolutions.biz/jenkins/job/datacore_interview/job/master/badge/icon)](https://newagesolutions.biz/jenkins/job/datacore_interview/job/master/)
+
 This repository is a small [monorepo](https://en.wikipedia.org/wiki/Monorepo) with two projects in two different languages.  Each sub-project is independent and has no cross-dependencies.
 
 
